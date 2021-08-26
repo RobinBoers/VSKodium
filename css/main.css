@@ -1,0 +1,351 @@
+/* General */
+
+.neo {
+    --color1: #f1f1f1;
+    --color2: #eee;
+    --color3: #7e7e7e;
+    --color4: #ececec;
+    --color5: #ffffff;
+    --color6: black;
+    --color7: #ffffff;
+}
+
+.ayu {
+    --color1: #0a0e14;
+    --color2: #2c2c2c;
+    --color3: #3d424d;
+    --color4: #01060e;
+    --color5: #0a0e14;
+    --color6: rgb(221, 221, 221);
+    --color7: #0f101a;
+}
+
+.cm-s-ayu-dark .CodeMirror-cursor {
+    width: auto;
+    border: 0;
+    background: rgba(155, 157, 162, 0.37);
+    z-index: 1;
+}
+
+.ayu .CodeMirror-dialog-top,
+.CodeMirror-dialog-bottom {
+    border-color: var(--color2);
+}
+
+body,
+html {
+    height: 100%;
+    font-family: sans-serif;
+    overflow: hidden;
+    background-color: var(--color5);
+    color: var(--color6);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* CodeMirror adjustments */
+
+.CodeMirror *,
+.CodeMirror-hints {
+    font-size: 21px;
+}
+
+.CodeMirror {
+    height: 100%;
+}
+
+.preview {
+    padding: 10px;
+}
+
+/* Previewer stuff */
+
+#output-iframe {
+    border: none;
+    height: 100%;
+    width: 100%;
+}
+
+/* Finder stuff */
+
+.finder .files {
+    margin: 0;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.finder p {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 16px;
+    padding-top: 25px;
+}
+
+.finder p span {
+    float: left;
+    padding-left: 0;
+    color: var(--color3);
+    font-weight: bolder;
+}
+
+.finder p .shorticon {
+    color: var(--color3);
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+}
+
+.finder ul {
+    border-top: 1px solid var(--color2);
+}
+
+.finder ul li:first-child {
+    margin-top: 15px;
+}
+
+.finder .shorticon:hover {
+    color: var(--color6);
+}
+
+.finder li {
+    list-style: none;
+    cursor: pointer;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.finder li:hover {
+    background-color: var(--color4);
+}
+
+.finder ::before {
+    font-family: "Font Awesome 5 Free";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.finder .folder::before {
+    content: "";
+    color: #fcca5e;
+}
+
+.finder .file::before {
+    /* content: ""; */
+    content: "";
+    color: royalblue;
+}
+
+.finder .file.html::before {
+    content: "";
+    font-family: "Font Awesome 5 Brands";
+    color: #ee5f28;
+}
+
+.finder .file.css::before {
+    content: "";
+    font-family: "Font Awesome 5 Brands";
+    color: #176aa6;
+}
+
+.finder .file.py::before {
+    content: "";
+    font-family: "Font Awesome 5 Brands";
+}
+
+.finder .file.js::before,
+finder .file.json::before {
+    /* content: ""; */
+    /* color: #f5de19;  */
+    content: "︁";
+    color: #88c249;
+    font-family: "Font Awesome 5 Brands";
+}
+
+.finder .file.md::before {
+    content: "";
+    font-family: "Font Awesome 5 Brands";
+    color: #282c34;
+}
+
+.finder .file.png::before,
+finder .file.jpg::before,
+finder .file.jpeg::before {
+    content: "";
+}
+
+.finder .folder.selected {
+    border-left: 3px solid #fcca5e;
+    background-color: var(--color4);
+}
+
+.finder .file.selected {
+    border-left: 3px solid royalblue;
+    background-color: var(--color4);
+}
+
+/* Menubar stuff */
+
+.menu .bar {
+    margin: 0;
+    padding: 0;
+}
+
+.menu .bar li {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 10px;
+}
+
+.menu-content {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-content .list {
+    display: none;
+    position: absolute;
+    background-color: var(--color7);
+    min-width: 180px;
+    top: 20px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.menu-content .list.edit {
+    left: 45px;
+}
+
+.menu-content .list.devices {
+    left: 95px;
+}
+
+.menu-content .list.options {
+    left: 170px;
+}
+
+.list:hover {
+    display: block;
+}
+
+.menu-content .list a {
+    color: var(--color6);
+    padding: 4px 6px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-content .list a span {
+    color: var(--color3);
+    font-size: 12px;
+    font-weight: lighter;
+    float: right;
+}
+
+.menu-content .list a:hover {
+    background-color: var(--color1);
+}
+
+.menu-content .link:hover .list {
+    display: block;
+}
+
+#flashButton {
+    display: none;
+}
+
+/* Device menu stuff */
+
+#disconnectButton,
+#connected-display {
+    display: none;
+}
+
+/* Statusbar stuff */
+
+#doc-info {
+    float: right;
+    padding-right: 5px;
+}
+
+#lang-display {
+    padding-left: 5px;
+}
+
+#vim-mode {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#vim-toolbar {
+    display: none;
+    float: left;
+}
+
+/* Main editor layout */
+
+.editor {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+        "menu menu menu"
+        "finder code preview"
+        "status status status";
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: 15% 45% 40%;
+    /* grid-template-columns: 60% 40%; */
+}
+
+.finder {
+    grid-area: "finder";
+    grid-row: 2;
+    border-right: 1px solid var(--color2);
+    /* display: none; */
+}
+
+.code {
+    grid-area: "code";
+    grid-row: 2;
+    border-right: 1px solid var(--color2);
+    resize: horizontal;
+    overflow: auto;
+}
+
+.preview {
+    grid-area: "preview";
+    grid-row: 2;
+    overflow: auto;
+}
+
+.menu {
+    grid-area: "menu";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    border-bottom: 1px solid var(--color2);
+}
+
+.lint {
+    grid-area: "status";
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 3;
+    border-top: 1px solid var(--color2);
+}
